@@ -1,0 +1,12 @@
+{
+  "name": "imposto-minimo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site do imposto de renda mínimo (Lei 15.270/2025) com calculadora · Santos Resende Advocacia",
+  "scripts": {
+    "test": "node --test tests/irm.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
