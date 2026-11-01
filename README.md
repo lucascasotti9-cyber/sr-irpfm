@@ -7,7 +7,9 @@ Não tem build nem dependências: os arquivos desta pasta são o site.
 index.html            página
 css/estilo.css        estilos
 js/irm.js             núcleo do cálculo (funções puras, sem DOM)
-js/calculadora.js     liga o formulário ao núcleo
+js/calculadora.js     liga o formulário ao núcleo e move o ponto "você" na reta da lei
+js/pagina.js          entradas das seções e os estados do demonstrativo em "Como funciona"
+js/inicio.js          marca que o JavaScript está ativo (sem ele, todo o conteúdo aparece direto)
 img/                  logo, ícones e imagem de compartilhamento (Open Graph)
 favicon.ico, apple-touch-icon.png, site.webmanifest
 robots.txt, sitemap.xml
