@@ -262,7 +262,6 @@ a { color: inherit; }
 .entrada.pct input { padding-left: 14px; padding-right: 36px; }
 .entrada input:focus { border-color: var(--accent); outline: none; }
 .entrada input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.painel__elo { margin-top: auto; padding-top: 8px; font-size: 16px; font-weight: 700; text-decoration-color: currentColor; }
 .calc__aviso { margin-top: 18px; max-width: 60em; }
 
 /* redutor */
@@ -307,10 +306,9 @@ a { color: inherit; }
 .contato__frase { grid-column: 1 / 6; }
 .contato__frase p { margin-top: 20px; font-size: var(--t-destaque); line-height: 1.5; color: var(--on-dark); }
 .contato__marca { grid-column: 6 / 9; justify-self: center; align-self: center; width: 100%; max-width: 300px; }
-.contato__caminhos { grid-column: 9 / 13; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
-.contato__pergunta { font-size: var(--t-destaque); font-weight: 700; }
-.contato__caminhos .elo { font-size: var(--t-destaque); font-weight: 700; }
-.contato__onde { font-size: 16px; color: var(--on-dark-soft); }
+.contato__dados { grid-column: 9 / 13; display: flex; flex-direction: column; gap: 18px; margin: 0; }
+.contato__dados dt { font-size: var(--t-nota); color: var(--on-dark-soft); }
+.contato__dados dd { margin: 2px 0 0; font-size: 17px; color: var(--on-dark); }
 
 /* rodapé: uma linha */
 .rodape { padding-block: 40px; font-size: var(--t-nota); color: var(--muted); }
@@ -346,7 +344,7 @@ a { color: inherit; }
   .perguntas__texto { margin-top: 32px; }
   .contato__frase { grid-column: 1 / -1; }
   .contato__marca { grid-column: 1 / 6; justify-self: start; margin-top: 48px; max-width: 280px; }
-  .contato__caminhos { grid-column: 7 / -1; margin-top: 48px; }
+  .contato__dados { grid-column: 7 / -1; margin-top: 48px; }
 }
 
 /* telefone */
@@ -378,8 +376,7 @@ a { color: inherit; }
   .revisar p { font-size: 17px; }
   .perguntas__texto { columns: 1; }
   .contato__marca { grid-column: 1 / -1; max-width: 220px; margin-top: 40px; }
-  .contato__caminhos { grid-column: 1 / -1; margin-top: 28px; }
-  .contato__caminhos .botao { max-width: 100%; overflow-wrap: anywhere; }
+  .contato__dados { grid-column: 1 / -1; margin-top: 28px; }
   .datas__agora { margin-inline: -10px; padding-inline: 10px; }
   .rodape__linha { grid-template-columns: 1fr; gap: 8px; }
   .rodape__aviso { justify-self: start; text-align: left; }
