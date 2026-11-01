@@ -382,6 +382,78 @@ a { color: inherit; }
   .rodape__aviso { justify-self: start; text-align: left; }
 }
 
+/* ===== Guia: sumário fixo e uma coluna de leitura. Todas as seções começam na mesma margem. ===== */
+.guia { display: grid; grid-template-columns: 220px minmax(0, 1fr); column-gap: clamp(40px, 5vw, 80px); align-items: start; padding-top: clamp(72px, 7vw, 104px); }
+.sumario { position: sticky; top: 32px; }
+.sumario__titulo { font-size: var(--t-nota); font-weight: 700; color: var(--muted); margin-bottom: 10px; }
+.sumario a { display: block; padding: 8px 0 8px 16px; border-left: 3px solid var(--alt); font-size: 16px; line-height: 1.35; color: var(--muted); text-decoration: none; transition: color var(--t-hover) ease, border-color var(--t-hover) ease; }
+.sumario a[aria-current="true"] { color: var(--ink); font-weight: 700; border-left-color: var(--accent); }
+@media (hover: hover) and (pointer: fine) { .sumario a:hover { color: var(--ink); } }
+.guia__conteudo { min-width: 0; }
+.guia .moldura { max-width: none; padding-inline: 0; }
+.guia .secao { margin-top: 0; }
+.guia .secao + .secao { margin-top: clamp(96px, 9vw, 128px); }
+.guia .grade > * { grid-column: auto; grid-row: auto; }
+.guia .grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 48px; }
+.guia .corrido { max-width: 46em; }
+.guia .afirmacao { font-size: clamp(20px, 1.7vw, 24px); }
+
+/* como funciona: título e frase em cima; passos à esquerda, demonstrativo fixo à direita */
+.guia .funciona { align-items: start; }
+.guia .funciona__texto { grid-column: 1; }
+.guia .funciona__palco { grid-column: 2; position: sticky; top: 15vh; }
+.guia .demo { position: static; max-width: none; margin: 0; }
+.guia .passos { margin-top: 12px; }
+.guia .passo { min-height: 0; justify-content: flex-start; padding-block: 20px; }
+.guia .passo__frase { font-size: clamp(22px, 2vw, 28px); }
+
+/* a reta da lei: texto e gráfico lado a lado dentro do palco */
+.guia .reta__grade { align-items: center; }
+.guia .reta__texto { grid-column: 1; }
+.guia .reta__figura { grid-column: 2; }
+
+/* base: as duas listas lado a lado */
+.guia .base__cabeca, .guia .calc__cabeca { max-width: none; }
+.guia .base { margin-top: 40px; }
+
+/* redutor: texto e tetos lado a lado; o exemplo logo abaixo */
+.guia .redutor__texto { grid-column: 1; grid-row: 1; }
+.guia .cifras--tetos { grid-column: 2; grid-row: 1; align-self: start; margin-top: 64px; }
+.guia .exemplo { grid-column: 1 / -1; grid-row: 2; max-width: 680px; }
+
+/* datas, revisar e perguntas: tudo na margem da coluna */
+.guia .datas li { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr) minmax(0, 2fr); }
+.guia .datas__agora { margin-inline: -16px; padding-inline: 16px; }
+.guia .revisar { max-width: 46em; margin: 0; }
+.guia .revisar .titulo { margin-bottom: 28px; }
+.guia .perguntas { display: block; }
+.guia .perguntas__texto { margin-top: 28px; columns: 1; max-width: 46em; }
+.guia .perguntas__texto p { margin-bottom: 0; padding-block: 16px; }
+.guia .perguntas__texto b { display: block; margin-bottom: 4px; font-size: 18px; }
+
+/* tablet e telefone: o sumário vira uma lista no topo do guia, e tudo empilha */
+@media (max-width: 1000px) {
+  .guia { grid-template-columns: minmax(0, 1fr); padding-top: 56px; }
+  .sumario { position: static; padding: 20px 20px 12px; background: var(--surface); }
+  .sumario ol { columns: 2; column-gap: 24px; }
+  .sumario a { break-inside: avoid; }
+  .guia__conteudo { margin-top: 72px; }
+  .guia .grade { grid-template-columns: minmax(0, 1fr); }
+  .guia .funciona__palco, .guia .reta__figura, .guia .cifras--tetos, .guia .exemplo { grid-column: 1; grid-row: auto; }
+  .guia .funciona__palco { position: static; margin-top: 8px; }
+  .guia .passo { min-height: 0; padding-block: 20px; }
+  .guia .cifras--tetos { margin-top: 32px; }
+  .guia .exemplo { margin-top: 32px; max-width: none; }
+  .guia .reta__texto { grid-column: 1; }
+}
+@media (max-width: 600px) {
+  .sumario ol { columns: 1; }
+  .guia .secao + .secao { margin-top: 80px; }
+  .guia__conteudo { margin-top: 56px; }
+  .guia .datas li { grid-template-columns: minmax(0, 1fr) auto; }
+  .guia .datas__agora { margin-inline: -10px; padding-inline: 10px; }
+}
+
 /* títulos que sobem por linha */
 [data-linhas] .linha { display: block; overflow: clip; padding-bottom: 0.12em; margin-bottom: -0.12em; }
 [data-linhas] .linha > span { display: block; }

@@ -37,3 +37,13 @@ window.quandoVisto = function (els, fn, folga) {
   },{rootMargin:'-45% 0px -45% 0px'});
   passos.forEach(function(p){ioPasso.observe(p);});
 })();
+
+/* sumário: destaca a seção que está sendo lida */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.sumario a'));
+  if(!links.length||!('IntersectionObserver' in window))return;
+  var porId={};links.forEach(function(a){porId[a.getAttribute('href').slice(1)]=a;});
+  function marca(id){links.forEach(function(a){if(a===porId[id])a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)marca(e.target.id);});},{rootMargin:'-35% 0px -60% 0px'});
+  Object.keys(porId).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s);});
+})();

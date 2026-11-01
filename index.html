@@ -85,9 +85,6 @@
   <div class="moldura topo__linha">
     <a class="topo__marca" href="#inicio" aria-label="Santos Resende Advocacia, início"><img src="img/logo.png" width="640" height="183" alt="Santos Resende Advocacia"></a>
     <nav class="topo__nav" aria-label="Seções">
-      <a class="elo" href="#como-funciona">Como funciona</a>
-      <a class="elo" href="#base">Base de cálculo</a>
-      <a class="elo" href="#perguntas">Perguntas</a>
       <a class="botao" href="#calculadora">Simular</a>
     </nav>
   </div>
@@ -131,6 +128,23 @@
     </svg>
   </figure>
 </section>
+
+<!-- Guia: sumário fixo ao lado e todas as seções numa mesma coluna -->
+<div class="moldura guia">
+  <nav class="sumario" aria-label="Sumário do guia">
+    <p class="sumario__titulo">Neste guia</p>
+    <ol>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#aliquota">Como a alíquota sobe</a></li>
+      <li><a href="#base">O que entra na conta</a></li>
+      <li><a href="#calculadora">Simule o seu imposto</a></li>
+      <li><a href="#redutor">O redutor</a></li>
+      <li><a href="#calendario">Datas que importam</a></li>
+      <li><a href="#revisar">O que revisar em 2026</a></li>
+      <li><a href="#perguntas">Dúvidas comuns</a></li>
+    </ol>
+  </nav>
+  <div class="guia__conteudo">
 
 <!-- Como funciona: palco fixo com o demonstrativo, que muda a cada passo -->
 <section class="secao" id="como-funciona" aria-labelledby="t-funciona">
@@ -370,15 +384,18 @@
   </div>
 </section>
 
+  </div>
+</div>
+
 <!-- Sobre este conteúdo: quem preparou, com que finalidade e onde fica o escritório -->
 <section class="contato" id="sobre" aria-labelledby="t-sobre">
   <div class="moldura grade contato__linha">
     <div class="contato__frase">
       <h2 id="t-sobre" class="titulo" data-linhas>Sobre este conteúdo</h2>
-      <p data-revela style="--i:1">Material preparado pela Santos Resende Advocacia para explicar o imposto de renda mínimo da Lei 15.270/2025. As informações e a calculadora são gerais e ilustrativas, e não substituem a leitura da lei nem a análise de cada caso.</p>
+      <p>Material preparado pela Santos Resende Advocacia para explicar o imposto de renda mínimo da Lei 15.270/2025. As informações e a calculadora são gerais e ilustrativas, e não substituem a leitura da lei nem a análise de cada caso.</p>
     </div>
-    <div class="contato__marca" data-revela style="--i:2"><img src="img/logo-clara.png" width="640" height="183" alt="Santos Resende Advocacia" loading="lazy"></div>
-    <dl class="contato__dados" data-revela style="--i:3">
+    <div class="contato__marca"><img src="img/logo-clara.png" width="640" height="183" alt="Santos Resende Advocacia" loading="lazy"></div>
+    <dl class="contato__dados">
       <div><dt>Endereço</dt><dd>Av. Armando Oliveira Cobra, 50, conj.&nbsp;1905 · São José dos Campos/SP</dd></div>
       <div><dt>Telefone</dt><dd>(12) 2170-9942</dd></div>
       <div><dt>E-mail</dt><dd>contato@santosresende.adv.br</dd></div>
