@@ -194,47 +194,45 @@
   </div>
 </section>
 
-<!-- A alíquota: cena de rolagem. A rolagem é a renda; a reta se desenha e a conta muda ao vivo.
-     Sem JavaScript ou com movimento reduzido, a seção mostra a reta completa no exemplo de R$ 900 mil. -->
-<section class="secao scene reta" id="aliquota" data-scene="reta" aria-labelledby="t-aliquota">
-  <div class="scene-stage reta__palco">
-    <div class="moldura grade reta__grade">
-      <div class="reta__texto">
-        <h2 id="t-aliquota" class="titulo" data-linhas>Como a alíquota sobe</h2>
-        <p class="corrido reta__explica">Entre R$&nbsp;600&nbsp;mil e R$&nbsp;1,2&nbsp;milhão, a alíquota sobe em linha reta, sem faixas. Acima de R$&nbsp;1,2&nbsp;milhão, fica fixa em 10%. Ela incide sobre toda a base, não apenas sobre o que passa de R$&nbsp;600&nbsp;mil.</p>
-        <div class="reta__leitura" aria-hidden="true">
-          <p class="reta__renda">Com <b data-r-renda>R$&nbsp;900&nbsp;mil</b> na base</p>
-          <p class="reta__aliq"><span data-r-aliq>5</span>%</p>
-        </div>
-        <p class="reta__formula">Alíquota (%) = renda anual ÷&nbsp;60.000&nbsp;−&nbsp;10</p>
-        <p class="reta__conta" data-r-conta>900.000 ÷ 60.000 = 15. Menos 10, a alíquota é 5%.</p>
+<!-- A alíquota: explicação estática. Texto, fórmula e exemplo à esquerda; a reta com cada ponto rotulado à direita. -->
+<section class="secao" id="aliquota" aria-labelledby="t-aliquota">
+  <div class="moldura grade reta__grade">
+    <div class="reta__texto">
+      <h2 id="t-aliquota" class="titulo" data-linhas>Como a alíquota sobe</h2>
+      <p class="corrido" data-revela style="--i:1">Entre R$&nbsp;600&nbsp;mil e R$&nbsp;1,2&nbsp;milhão de renda no ano, a alíquota mínima sobe em linha reta, sem faixas. Acima de R$&nbsp;1,2&nbsp;milhão, fica fixa em 10%. Ela incide sobre toda a base, não apenas sobre o que passa de R$&nbsp;600&nbsp;mil.</p>
+      <div class="formula" data-revela style="--i:2">
+        <p class="formula__regra">Alíquota (%) = renda anual ÷&nbsp;60.000&nbsp;−&nbsp;10</p>
+        <p class="formula__exemplo">Com R$&nbsp;900&nbsp;mil: 900.000 ÷ 60.000 = 15. Menos 10, a alíquota é <b>5%</b>, aplicada sobre os R$&nbsp;900&nbsp;mil: R$&nbsp;45.000 de imposto mínimo.</p>
       </div>
-      <figure class="reta__figura">
-        <div class="frag grafico" data-ui role="img" aria-label="Reta da alíquota mínima: 0% até R$ 600 mil, 2,5% com R$ 750 mil, 5% com R$ 900 mil, 7,5% com R$ 1,05 milhão e 10% a partir de R$ 1,2 milhão">
-          <p class="frag__rotulo">Alíquota mínima por renda anual na base</p>
-          <svg class="rampa rampa--cena" viewBox="0 0 560 300" aria-hidden="true">
-            <line class="rampa__guia" x1="56" y1="40" x2="536" y2="40"/>
-            <line class="rampa__guia" x1="56" y1="145" x2="536" y2="145"/>
-            <line class="rampa__eixo" x1="56" y1="250" x2="536" y2="250"/>
-            <polyline class="rampa__trilho" points="56,250 248,250 440,40 536,40"/>
-            <polyline class="rampa__reta" data-r-reta points="56,250 248,250 440,40 536,40"/>
-            <g class="rampa__marco" data-marco="750000"><circle cx="296" cy="197.5" r="7"/><text x="282" y="186" text-anchor="end">2,5%</text></g>
-            <g class="rampa__marco" data-marco="900000"><circle cx="344" cy="145" r="7"/><text x="330" y="133" text-anchor="end">5%</text></g>
-            <g class="rampa__marco" data-marco="1050000"><circle cx="392" cy="92.5" r="7"/><text x="378" y="81" text-anchor="end">7,5%</text></g>
-            <g class="rampa__marco" data-marco="1200000"><circle cx="440" cy="40" r="7"/><text x="440" y="24" text-anchor="middle">10%</text></g>
-            <text class="rampa__txt" x="46" y="255" text-anchor="end">0%</text>
-            <text class="rampa__txt" x="46" y="150" text-anchor="end">5%</text>
-            <text class="rampa__txt" x="46" y="45" text-anchor="end">10%</text>
-            <text class="rampa__txt" x="248" y="280" text-anchor="middle">R$ 600 mil</text>
-            <text class="rampa__txt" x="440" y="280" text-anchor="middle">R$ 1,2 mi</text>
-            <g class="rampa__cursor" data-r-cursor style="transform:translate(344px,145px)">
-              <line x1="0" y1="0" x2="0" y2="0" data-r-prumo/>
-              <circle r="10"/>
-            </g>
-          </svg>
-        </div>
-      </figure>
     </div>
+    <figure class="reta__figura" data-revela style="--i:2">
+      <div class="frag grafico" data-ui role="img" aria-label="Alíquota mínima por renda anual: 0% até R$ 600 mil; 2,5% com R$ 750 mil; 5% com R$ 900 mil; 7,5% com R$ 1,05 milhão; 10% a partir de R$ 1,2 milhão">
+        <p class="frag__rotulo">Alíquota mínima por renda anual na base</p>
+        <svg class="rampa rampa--rotulada" viewBox="0 0 560 300" aria-hidden="true">
+          <line class="rampa__guia" x1="56" y1="40" x2="536" y2="40"/>
+          <line class="rampa__guia" x1="56" y1="145" x2="536" y2="145"/>
+          <line class="rampa__eixo" x1="56" y1="250" x2="536" y2="250"/>
+          <polyline class="rampa__reta rampa__reta--desenho" pathLength="1" points="56,250 248,250 440,40 536,40"/>
+          <g class="rampa__marco" style="--i:0"><circle cx="248" cy="250" r="7"/><text x="236" y="236" text-anchor="end">até R$ 600 mil · <tspan>0%</tspan></text></g>
+          <g class="rampa__marco" style="--i:1"><circle cx="296" cy="197.5" r="7"/><text x="282" y="202" text-anchor="end">R$ 750 mil · <tspan>2,5%</tspan></text></g>
+          <g class="rampa__marco" style="--i:2"><circle cx="344" cy="145" r="7"/><text x="330" y="150" text-anchor="end">R$ 900 mil · <tspan>5%</tspan></text></g>
+          <g class="rampa__marco" style="--i:3"><circle cx="392" cy="92.5" r="7"/><text x="378" y="97" text-anchor="end">R$ 1,05 mi · <tspan>7,5%</tspan></text></g>
+          <g class="rampa__marco" style="--i:4"><circle cx="440" cy="40" r="7"/><text x="426" y="45" text-anchor="end">R$ 1,2 mi ou mais · <tspan>10%</tspan></text></g>
+          <text class="rampa__txt" x="46" y="255" text-anchor="end">0%</text>
+          <text class="rampa__txt" x="46" y="150" text-anchor="end">5%</text>
+          <text class="rampa__txt" x="46" y="45" text-anchor="end">10%</text>
+          <text class="rampa__txt" x="296" y="282" text-anchor="middle">renda anual na base →</text>
+        </svg>
+      </div>
+      <dl class="pontos">
+        <div><dt>Até R$&nbsp;600&nbsp;mil</dt><dd>0%</dd></div>
+        <div><dt>R$&nbsp;750&nbsp;mil</dt><dd>2,5%</dd></div>
+        <div><dt>R$&nbsp;900&nbsp;mil</dt><dd>5%</dd></div>
+        <div><dt>R$&nbsp;1,05&nbsp;milhão</dt><dd>7,5%</dd></div>
+        <div><dt>R$&nbsp;1,2&nbsp;milhão ou mais</dt><dd>10%</dd></div>
+      </dl>
+      <figcaption class="legenda">Cada ponto mostra a alíquota mínima para aquela renda. Para o seu caso, use a calculadora logo abaixo.</figcaption>
+    </figure>
   </div>
 </section>
 

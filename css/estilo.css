@@ -517,6 +517,29 @@ a { color: inherit; }
   .guia .datas li.datas__agora { padding-inline: 18px; }
 }
 
+/* alíquota: explicação estática, gráfico com cada ponto rotulado */
+.formula { margin-top: 28px; padding: 22px 26px; background: var(--surface); max-width: 38em; }
+.formula__regra { font-family: var(--serifa); font-size: clamp(20px, 1.7vw, 24px); font-weight: 500; font-variant-numeric: lining-nums; }
+.formula__exemplo { margin-top: 10px; font-size: 16px; line-height: 1.55; }
+.formula__exemplo b { color: var(--accent-ink); }
+.rampa--rotulada .rampa__marco circle { fill: var(--accent); stroke: var(--ink); stroke-width: 3; }
+.rampa--rotulada .rampa__marco text { fill: var(--muted); font: 400 14px var(--fonte); }
+.rampa--rotulada .rampa__marco tspan { fill: var(--ink); font-weight: 700; }
+.pontos { display: none; }
+@media (max-width: 600px) {
+  .rampa--rotulada .rampa__marco text { display: none; }
+  .pontos { display: flex; flex-direction: column; gap: 4px; margin: 12px 0 0; }
+  .pontos div { display: flex; justify-content: space-between; gap: 16px; padding: 10px 14px; background: var(--surface); }
+  .pontos dt { font-size: 16px; }
+  .pontos dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-revela] .rampa__reta--desenho { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .js [data-revela].dentro .rampa__reta--desenho { stroke-dashoffset: 0; transition: stroke-dashoffset 1400ms var(--ease-in-out) 300ms; }
+  .js [data-revela] .rampa--rotulada .rampa__marco { opacity: 0; }
+  .js [data-revela].dentro .rampa--rotulada .rampa__marco { opacity: 1; transition: opacity 400ms var(--ease-out); transition-delay: calc(900ms + var(--i) * 140ms); }
+}
+
 /* títulos que sobem por linha */
 [data-linhas] .linha { display: block; overflow: clip; padding-bottom: 0.12em; margin-bottom: -0.12em; }
 [data-linhas] .linha > span { display: block; }
