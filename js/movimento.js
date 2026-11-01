@@ -33,7 +33,7 @@
       var ult = el.querySelector('.linha:last-of-type > span');
       if (ult) ult.addEventListener('transitionend', function () { devolve(el); }, { once: true }); else devolve(el);
     }
-    document.fonts.ready.then(function () { els.forEach(parte); quandoVisto(els, entra, 0.12); });
+    document.fonts.ready.then(function () { els.forEach(parte); quandoVisto(els, entra, 0); });
     var largura = innerWidth;
     addEventListener('resize', function () {
       if (innerWidth === largura) return; largura = innerWidth;

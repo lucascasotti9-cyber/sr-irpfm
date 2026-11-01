@@ -9,7 +9,7 @@
 <meta name="author" content="Santos Resende Advocacia">
 <meta name="theme-color" content="#FBFBFD">
 <meta name="color-scheme" content="light">
-<link rel="canonical" href="https://santosresende.adv.br/">
+<link rel="canonical" href="https://sr-irpfm.vercel.app/">
 
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Santos Resende Advocacia">
 <meta property="og:title" content="Imposto de renda mínimo: você vai ter de complementar?">
 <meta property="og:description" content="Desde 2026, quem recebe mais de R$ 600 mil por ano tem um piso de imposto. Entenda a regra da Lei 15.270/2025 e simule o seu caso antes da declaração de 2027.">
-<meta property="og:url" content="https://santosresende.adv.br/">
-<meta property="og:image" content="https://santosresende.adv.br/img/og-imposto-minimo.png">
+<meta property="og:url" content="https://sr-irpfm.vercel.app/">
+<meta property="og:image" content="https://sr-irpfm.vercel.app/img/og-imposto-minimo.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Imposto de renda mínimo: você vai ter de complementar?">
 <meta name="twitter:description" content="Entenda o imposto de renda mínimo da Lei 15.270/2025 e simule quanto você pode ter de complementar na declaração de 2027.">
-<meta name="twitter:image" content="https://santosresende.adv.br/img/og-imposto-minimo.png">
+<meta name="twitter:image" content="https://sr-irpfm.vercel.app/img/og-imposto-minimo.png">
 
 <!-- Ícones -->
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -43,11 +43,11 @@
   "@graph": [
     {
       "@type": "LegalService",
-      "@id": "https://santosresende.adv.br/#escritorio",
+      "@id": "https://sr-irpfm.vercel.app/#escritorio",
       "name": "Santos Resende Advocacia",
-      "url": "https://santosresende.adv.br/",
-      "logo": "https://santosresende.adv.br/img/logo.png",
-      "image": "https://santosresende.adv.br/img/og-imposto-minimo.png",
+      "url": "https://sr-irpfm.vercel.app/",
+      "logo": "https://sr-irpfm.vercel.app/img/logo.png",
+      "image": "https://sr-irpfm.vercel.app/img/og-imposto-minimo.png",
       "telephone": "+55-12-2170-9942",
       "email": "contato@santosresende.adv.br",
       "address": {
@@ -60,12 +60,12 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://santosresende.adv.br/#pagina",
-      "url": "https://santosresende.adv.br/",
+      "@id": "https://sr-irpfm.vercel.app/#pagina",
+      "url": "https://sr-irpfm.vercel.app/",
       "name": "Imposto de Renda Mínimo",
       "description": "Entenda o imposto de renda mínimo da Lei 15.270/2025 e calcule quanto você pode ter de complementar na declaração de 2027.",
       "inLanguage": "pt-BR",
-      "publisher": { "@id": "https://santosresende.adv.br/#escritorio" }
+      "publisher": { "@id": "https://sr-irpfm.vercel.app/#escritorio" }
     }
   ]
 }
@@ -95,7 +95,7 @@
 
 <main id="conteudo">
 
-<!-- Primeira tela: o título, a frase que diz o que é, e duas portas: a regra e a simulação -->
+<!-- Primeira tela: o título, a frase, a ação, e a reta da lei atravessando o campo escuro -->
 <section class="abertura" id="inicio" aria-labelledby="titulo">
   <div class="moldura abertura__corpo">
     <h1 id="titulo" class="exibicao linhas">
@@ -103,49 +103,33 @@
       <span class="linha"><span data-linha style="--i:1">mínimo</span></span>
     </h1>
     <p class="abertura__frase" data-chega style="--d:420ms">Pela Lei 15.270/2025, quem recebe mais de R$ 600 mil por ano tem, desde 2026, um piso de imposto, apurado na declaração de 2027.</p>
-
-    <div class="portas">
-      <a class="porta" href="#como-funciona" data-abre style="--d:260ms">
-        <span class="porta__quadro">
-          <span class="frag porta__frag" data-ui role="img" aria-label="Gráfico da alíquota mínima: zero até R$ 600 mil, subindo em linha reta até 10% em R$ 1,2 milhão">
-            <span class="frag__rotulo">Alíquota mínima</span>
-            <span class="frag__numero">0% a 10%</span>
-            <svg class="rampa rampa--porta" viewBox="0 0 260 200" aria-hidden="true">
-              <line class="rampa__eixo" x1="36" y1="170" x2="252" y2="170"/>
-              <polyline class="rampa__reta rampa__reta--desenha" pathLength="1" points="36,170 121.6,170 207.2,20 252,20"/>
-              <text class="rampa__txt" x="30" y="174" text-anchor="end">0%</text>
-              <text class="rampa__txt" x="30" y="24" text-anchor="end">10%</text>
-              <text class="rampa__txt" x="121.6" y="192" text-anchor="middle">600 mil</text>
-              <text class="rampa__txt" x="207.2" y="192" text-anchor="middle">1,2 mi</text>
-              <circle class="rampa__viajante" r="7" cx="0" cy="0"/>
-            </svg>
-            <span class="frag__nota">Sobe em linha reta entre R$ 600 mil e R$ 1,2 milhão de renda no ano.</span>
-          </span>
-        </span>
-        <span class="porta__nome">Entender a regra</span>
-        <span class="porta__linha">Como o piso é calculado</span>
-      </a>
-
-      <a class="porta" href="#calculadora" data-abre style="--d:360ms">
-        <span class="porta__quadro">
-          <span class="frag porta__frag" data-ui role="img" aria-label="Exemplo de simulação: complemento estimado de R$ 49.305">
-            <span class="frag__rotulo">Complemento estimado</span>
-            <span class="frag__numero"><span data-rola>R$ 49.305</span></span>
-            <span class="frag__linhas">
-              <span><span>Renda na base</span><b>R$ 1,02 mi</b></span>
-              <span><span>Alíquota mínima</span><b>7%</b></span>
-              <span><span>IR mínimo</span><b>R$ 71.400</b></span>
-              <span><span>IR já pago</span><b>R$ 22.095</b></span>
-              <span><span>Redutor</span><b>R$ 0</b></span>
-            </span>
-            <span class="frag__selo">Declaração de 2027</span>
-          </span>
-        </span>
-        <span class="porta__nome">Simular meu imposto</span>
-        <span class="porta__linha">Seus valores, em reais</span>
-      </a>
+    <div class="abertura__acoes" data-chega style="--d:520ms">
+      <a class="botao botao--grande" href="#calculadora">Simular meu imposto</a>
+      <a class="elo elo--claro" href="#como-funciona">Entender a regra</a>
     </div>
   </div>
+  <figure class="abertura__reta" role="img" aria-label="A reta da lei: alíquota mínima de zero até R$ 600 mil por ano, subindo em linha reta até 10% em R$ 1,2 milhão">
+    <svg class="reta-grande reta-grande--larga" viewBox="0 0 1440 560" aria-hidden="true">
+      <line class="reta-grande__base" x1="0" y1="500" x2="1440" y2="500"/>
+      <line class="reta-grande__guia" x1="1240" y1="80" x2="1240" y2="500"/>
+      <polyline class="reta-grande__linha" pathLength="1" points="0,500 620,500 1240,80 1440,80"/>
+      <text class="reta-grande__txt" x="32" y="484">0%</text>
+      <text class="reta-grande__txt" x="620" y="536" text-anchor="middle">R$ 600 mil</text>
+      <text class="reta-grande__txt" x="1240" y="536" text-anchor="middle">R$ 1,2 milhão</text>
+      <text class="reta-grande__txt reta-grande__txt--forte" x="1408" y="60" text-anchor="end">10%</text>
+      <circle class="reta-grande__ponto" r="12"/>
+    </svg>
+    <svg class="reta-grande reta-grande--estreita" viewBox="0 0 390 300" aria-hidden="true">
+      <line class="reta-grande__base" x1="0" y1="250" x2="390" y2="250"/>
+      <line class="reta-grande__guia" x1="300" y1="60" x2="300" y2="250"/>
+      <polyline class="reta-grande__linha" pathLength="1" points="0,250 150,250 300,60 390,60"/>
+      <text class="reta-grande__txt" x="20" y="238">0%</text>
+      <text class="reta-grande__txt" x="150" y="276" text-anchor="middle">R$ 600 mil</text>
+      <text class="reta-grande__txt" x="300" y="276" text-anchor="middle">R$ 1,2 mi</text>
+      <text class="reta-grande__txt reta-grande__txt--forte" x="370" y="44" text-anchor="end">10%</text>
+      <circle class="reta-grande__ponto" r="9"/>
+    </svg>
+  </figure>
 </section>
 
 <!-- Como funciona: palco fixo com o demonstrativo, que muda a cada passo -->
@@ -321,6 +305,19 @@
       <h2 id="t-redutor" class="titulo" data-linhas>O redutor limita a carga somada</h2>
       <p class="corrido" data-revela style="--i:1">Para sócios de empresas: se o imposto pago pela empresa sobre o lucro, somado ao imposto mínimo do sócio sobre os dividendos, passar do teto nominal, o excesso é abatido. Na prática, sócio de empresa que já paga a carga cheia pode não ter nada a complementar.</p>
       <p class="corrido" data-revela style="--i:2">Para usar o redutor, a empresa precisa ter demonstrações financeiras que comprovem a carga efetiva.</p>
+    </div>
+    <div class="frag exemplo" data-ui data-revela style="--i:3">
+      <p class="demo__titulo">Exemplo do redutor, só com dividendos</p>
+      <table class="demo__tabela">
+        <tbody>
+          <tr><td>Dividendos no ano</td><td>R$ 1.200.000</td></tr>
+          <tr><td>IR mínimo do sócio <small>1.200.000 × 10%</small></td><td>R$ 120.000</td></tr>
+          <tr><td>Carga somada <small>empresa 30% + sócio 10%</small></td><td class="exemplo__alerta">40%</td></tr>
+          <tr><td>Redutor <small>o que passa de 34%: 6% de R$ 1,2 mi</small></td><td>− R$ 72.000</td></tr>
+          <tr class="exemplo__final"><td>Complemento</td><td>R$ 48.000</td></tr>
+        </tbody>
+      </table>
+      <p class="demo__nota">Valores ilustrativos, sem outro imposto pago no ano.</p>
     </div>
     <dl class="cifras cifras--tetos">
       <div data-revela style="--i:2"><dt><span data-rola>34%</span></dt><dd>Regra geral para empresas</dd></div>

@@ -37,13 +37,11 @@ Ou abra o `index.html` direto no navegador.
 ## Domínio
 
 As URLs absolutas (canonical, Open Graph, dados estruturados, `robots.txt` e `sitemap.xml`)
-usam `https://santosresende.adv.br/`. Se o site for para outro endereço, troque em todos os arquivos:
+usam `https://sr-irpfm.vercel.app/`. Quando o site passar para um domínio próprio, troque em todos os arquivos:
 
 ```bash
-grep -rl "santosresende.adv.br/" index.html robots.txt sitemap.xml | xargs sed -i 's#https://santosresende.adv.br/#https://NOVO-ENDERECO/#g'
+grep -rl "sr-irpfm.vercel.app/" index.html robots.txt sitemap.xml | xargs sed -i 's#https://sr-irpfm.vercel.app/#https://NOVO-ENDERECO/#g'
 ```
-
-(o e-mail `contato@santosresende.adv.br` não é alterado por esse comando.)
 
 ## Publicar
 

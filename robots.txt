@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://santosresende.adv.br/sitemap.xml
+Sitemap: https://sr-irpfm.vercel.app/sitemap.xml
