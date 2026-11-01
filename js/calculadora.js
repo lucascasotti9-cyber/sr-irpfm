@@ -20,7 +20,7 @@
     ponto.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px)';}
   function atualiza(){var v={};f.querySelectorAll('input').forEach(function(i){v[i.name]=ler(i);});
     var r=IRM.calcular(v);
-    out('base',IRM.reaisCurto(r.base));out('aliq',r.aliquota.toLocaleString('pt-BR',{maximumFractionDigits:2})+'%');
+    out('base',IRM.reaisCurto(r.base).replace(/ /g,'\u00a0'));out('aliq',r.aliquota.toLocaleString('pt-BR',{maximumFractionDigits:2})+'%');
     conta('min',r.minimo);conta('irt',r.irTabela);conta('ira',r.irAplicacoes);conta('ret',r.retencao);conta('red',r.redutor);conta('fim',r.complemento);
     out('msg',r.mensagem);
     f.querySelector('[data-o-box]').classList.toggle('zero',r.complemento===0);

@@ -15,7 +15,9 @@ window.quandoVisto = function (els, fn, folga) {
   function confere() {
     pedido = false;
     var limite = innerHeight * (1 - folga);
-    pendentes.slice().forEach(function (el) { if (el.getBoundingClientRect().top < limite) feito(el); });
+    /* primeiro todas as leituras, depois as escritas: evita recalcular o layout a cada elemento */
+    var prontos = pendentes.filter(function (el) { return el.getBoundingClientRect().top < limite; });
+    prontos.forEach(feito);
     if (!pendentes.length) removeEventListener('scroll', aoRolar);
   }
   function aoRolar() { if (!pedido) { pedido = true; requestAnimationFrame(confere); } }

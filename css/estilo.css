@@ -50,7 +50,8 @@
 
 /* base */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 24px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(247, 147, 30, 0.2); }
+a, button, input, label, summary { touch-action: manipulation; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 500 var(--t-corpo)/1.55 var(--fonte); -webkit-font-smoothing: antialiased; }
 img, svg { display: block; max-width: 100%; }
 img { height: auto; }
@@ -483,7 +484,7 @@ a { color: inherit; }
 
   /* o ponto do "Agora" pulsa devagar */
   .ponto--agora { position: relative; }
-  .ponto--agora::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); animation: pulsa 2.4s var(--ease-out) infinite; }
+  .ponto--agora::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); animation: pulsa 2.4s var(--ease-out) 2; }
 }
 @keyframes desenha { to { stroke-dashoffset: 0; } }
 @keyframes aparece { to { opacity: 1; } }
@@ -496,8 +497,8 @@ a { color: inherit; }
   /* a reta se desenha e o ponto passa a percorrê-la */
   .js .reta-grande__linha { stroke-dasharray: 1; stroke-dashoffset: 1; animation: desenha 1600ms var(--ease-in-out) 500ms forwards; }
   .js .reta-grande__ponto { opacity: 0; }
-  .js .reta-grande--larga .reta-grande__ponto { animation: aparece 300ms ease 2100ms forwards, viaja-larga 9s var(--ease-in-out) 2100ms infinite alternate; }
-  .js .reta-grande--estreita .reta-grande__ponto { animation: aparece 300ms ease 2100ms forwards, viaja-estreita 9s var(--ease-in-out) 2100ms infinite alternate; }
+  .js .reta-grande--larga .reta-grande__ponto { animation: aparece 300ms ease 2100ms forwards, viaja-larga 4.8s var(--ease-in-out) 2100ms 1 forwards; }
+  .js .reta-grande--estreita .reta-grande__ponto { animation: aparece 300ms ease 2100ms forwards, viaja-estreita 4.8s var(--ease-in-out) 2100ms 1 forwards; }
   .js .abertura [data-chega] { opacity: 0; transform: translateY(14px); animation: chega 600ms var(--ease-out) forwards; animation-delay: var(--d); }
 
   .js [data-revela] { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-expo); transition-delay: calc(var(--i, 0) * var(--stagger-item)); }

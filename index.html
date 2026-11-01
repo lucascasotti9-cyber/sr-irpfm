@@ -83,7 +83,7 @@
 
 <header class="topo">
   <div class="moldura topo__linha">
-    <a class="topo__marca" href="#inicio" aria-label="Santos Resende Advocacia, início"><img src="img/logo.png" width="640" height="183" alt="Santos Resende Advocacia"></a>
+    <a class="topo__marca" href="#inicio" aria-label="Santos Resende Advocacia, início"><img src="img/logo.png" width="640" height="183" alt="Santos Resende Advocacia" fetchpriority="high"></a>
     <nav class="topo__nav" aria-label="Seções">
       <a class="botao" href="#calculadora">Simular</a>
     </nav>
@@ -99,7 +99,7 @@
       <span class="linha"><span data-linha style="--i:0">Imposto de renda</span></span>
       <span class="linha"><span data-linha style="--i:1">mínimo</span></span>
     </h1>
-    <p class="abertura__frase" data-chega style="--d:420ms">Pela Lei 15.270/2025, quem recebe mais de R$ 600 mil por ano tem, desde 2026, um piso de imposto, apurado na declaração de 2027.</p>
+    <p class="abertura__frase" data-chega style="--d:420ms">Pela Lei&nbsp;15.270/2025, quem recebe mais de R$&nbsp;600&nbsp;mil por ano tem, desde 2026, um piso de imposto, apurado na declaração de 2027.</p>
     <div class="abertura__acoes" data-chega style="--d:520ms">
       <a class="botao botao--grande" href="#calculadora">Simular meu imposto</a>
       <a class="elo elo--claro" href="#como-funciona">Entender a regra</a>
@@ -168,15 +168,15 @@
       </ol>
     </div>
     <div class="funciona__palco">
-      <div class="frag demo estado-3" data-ui id="demonstrativo" aria-live="polite">
+      <div class="frag demo estado-3" data-ui id="demonstrativo">
         <p class="demo__titulo">Demonstrativo do imposto mínimo</p>
         <table class="demo__tabela">
           <tbody>
-            <tr><td>Renda na base</td><td>R$ 900.000</td></tr>
+            <tr><td>Renda na base</td><td>R$&nbsp;900.000</td></tr>
             <tr class="demo__p1"><td>Alíquota mínima</td><td>5%</td></tr>
-            <tr class="demo__p1 demo__destaque1"><td>IR mínimo <small>900.000 × 5%</small></td><td>R$ 45.000</td></tr>
-            <tr class="demo__p2"><td>Já pago no ano</td><td><span class="demo__cel"><span class="demo__vazio">a apurar</span><span class="demo__valor">− R$ 32.000</span></span></td></tr>
-            <tr class="demo__p3 demo__final"><td>Complemento</td><td><span class="demo__cel"><span class="demo__vazio">a apurar</span><span class="demo__valor">R$ 13.000</span></span></td></tr>
+            <tr class="demo__p1 demo__destaque1"><td>IR mínimo <small>900.000 × 5%</small></td><td>R$&nbsp;45.000</td></tr>
+            <tr class="demo__p2"><td>Já pago no ano</td><td><span class="demo__cel"><span class="demo__vazio">a apurar</span><span class="demo__valor">− R$&nbsp;32.000</span></span></td></tr>
+            <tr class="demo__p3 demo__final"><td>Complemento</td><td><span class="demo__cel"><span class="demo__vazio">a apurar</span><span class="demo__valor">R$&nbsp;13.000</span></span></td></tr>
           </tbody>
         </table>
         <p class="demo__nota">Exemplo com valores ilustrativos.</p>
@@ -192,9 +192,9 @@
     <div class="moldura grade reta__grade">
       <div class="reta__texto">
         <h2 id="t-aliquota" class="titulo" data-linhas>Como a alíquota sobe</h2>
-        <p class="corrido reta__explica">Entre R$ 600 mil e R$ 1,2 milhão, a alíquota sobe em linha reta, sem faixas. Acima de R$ 1,2 milhão, fica fixa em 10%. Ela incide sobre toda a base, não apenas sobre o que passa de R$ 600 mil.</p>
+        <p class="corrido reta__explica">Entre R$&nbsp;600&nbsp;mil e R$&nbsp;1,2&nbsp;milhão, a alíquota sobe em linha reta, sem faixas. Acima de R$&nbsp;1,2&nbsp;milhão, fica fixa em 10%. Ela incide sobre toda a base, não apenas sobre o que passa de R$&nbsp;600&nbsp;mil.</p>
         <div class="reta__leitura" aria-hidden="true">
-          <p class="reta__renda">Com <b data-r-renda>R$ 900 mil</b> na base</p>
+          <p class="reta__renda">Com <b data-r-renda>R$&nbsp;900&nbsp;mil</b> na base</p>
           <p class="reta__aliq"><span data-r-aliq>5</span>%</p>
         </div>
         <p class="reta__formula">Alíquota (%) = renda anual ÷&nbsp;60.000&nbsp;−&nbsp;10</p>
@@ -258,7 +258,7 @@
         </ul>
       </div>
     </div>
-    <p class="nota base__nota">Lista resumida. As exclusões completas estão no art. 16-A da Lei 9.250/1995, incluído pela Lei 15.270/2025.</p>
+    <p class="nota base__nota">Lista resumida. As exclusões completas estão no art.&nbsp;16-A da Lei&nbsp;9.250/1995, incluído pela Lei&nbsp;15.270/2025.</p>
   </div>
 </section>
 
@@ -301,8 +301,8 @@
         <legend class="so-leitor">Rendimentos do ano</legend>
         <div class="campo"><label for="c-sal">Salário e pró-labore<small>Valor bruto no ano</small></label><div class="entrada"><span>R$</span><input id="c-sal" name="sal" inputmode="numeric" autocomplete="off" value="120.000"></div></div>
         <div class="campo"><label for="c-alu">Aluguéis e outros tributáveis<small>Carnê-leão e declaração</small></label><div class="entrada"><span>R$</span><input id="c-alu" name="alu" inputmode="numeric" autocomplete="off" value="0"></div></div>
-        <div class="campo"><label for="c-dsr">Dividendos sem retenção<small>Até R$ 50 mil por mês de cada empresa</small></label><div class="entrada"><span>R$</span><input id="c-dsr" name="dsr" inputmode="numeric" autocomplete="off" value="900.000"></div></div>
-        <div class="campo"><label for="c-dcr">Dividendos com retenção de 10%<small>Acima de R$ 50 mil por mês de uma empresa</small></label><div class="entrada"><span>R$</span><input id="c-dcr" name="dcr" inputmode="numeric" autocomplete="off" value="0"></div></div>
+        <div class="campo"><label for="c-dsr">Dividendos sem retenção<small>Até R$&nbsp;50&nbsp;mil por mês de cada empresa</small></label><div class="entrada"><span>R$</span><input id="c-dsr" name="dsr" inputmode="numeric" autocomplete="off" value="900.000"></div></div>
+        <div class="campo"><label for="c-dcr">Dividendos com retenção de 10%<small>Acima de R$&nbsp;50&nbsp;mil por mês de uma empresa</small></label><div class="entrada"><span>R$</span><input id="c-dcr" name="dcr" inputmode="numeric" autocomplete="off" value="0"></div></div>
         <div class="campo"><label for="c-apl">Aplicações tributadas<small>Rendimento de CDB, Tesouro e fundos</small></label><div class="entrada"><span>R$</span><input id="c-apl" name="apl" inputmode="numeric" autocomplete="off" value="0"></div></div>
         <div class="campo"><label for="c-emp">Carga de IRPJ e CSLL da empresa<small id="d-emp">Sobre o lucro contábil, de 0% a 34%</small></label><div class="entrada pct"><input id="c-emp" name="emp" inputmode="numeric" autocomplete="off" value="15" data-pct aria-describedby="d-emp"><span>%</span></div></div>
       </fieldset>
@@ -323,11 +323,11 @@
       <p class="demo__titulo">Exemplo do redutor, só com dividendos</p>
       <table class="demo__tabela">
         <tbody>
-          <tr><td>Dividendos no ano</td><td>R$ 1.200.000</td></tr>
-          <tr><td>IR mínimo do sócio <small>1.200.000 × 10%</small></td><td>R$ 120.000</td></tr>
+          <tr><td>Dividendos no ano</td><td>R$&nbsp;1.200.000</td></tr>
+          <tr><td>IR mínimo do sócio <small>1.200.000 × 10%</small></td><td>R$&nbsp;120.000</td></tr>
           <tr><td>Carga somada <small>empresa 30% + sócio 10%</small></td><td class="exemplo__alerta">40%</td></tr>
-          <tr><td>Redutor <small>o que passa de 34%: 6% de R$ 1,2 mi</small></td><td>− R$ 72.000</td></tr>
-          <tr class="exemplo__final"><td>Complemento</td><td>R$ 48.000</td></tr>
+          <tr><td>Redutor <small>o que passa de 34%: 6% de R$&nbsp;1,2&nbsp;mi</small></td><td>− R$&nbsp;72.000</td></tr>
+          <tr class="exemplo__final"><td>Complemento</td><td>R$&nbsp;48.000</td></tr>
         </tbody>
       </table>
       <p class="demo__nota">Valores ilustrativos, sem outro imposto pago no ano.</p>
@@ -346,7 +346,7 @@
     <h2 id="t-datas" class="titulo" data-linhas>Datas que importam</h2>
     <ol class="datas">
       <li data-revela style="--i:1"><b class="datas__quando">Dezembro de 2025</b><p>Prazo para aprovar a distribuição dos lucros apurados até 2025 sem a nova tributação.</p><span class="datas__estado">Encerrado</span></li>
-      <li data-revela style="--i:2"><b class="datas__quando">Janeiro de 2026</b><p>Começa a retenção de 10% sobre dividendos acima de R$ 50 mil por mês.</p><span class="datas__estado">Em vigor</span></li>
+      <li data-revela style="--i:2"><b class="datas__quando">Janeiro de 2026</b><p>Começa a retenção de 10% sobre dividendos acima de R$&nbsp;50&nbsp;mil por mês.</p><span class="datas__estado">Em vigor</span></li>
       <li class="datas__agora" data-revela style="--i:3"><b class="datas__quando">Ano de 2026</b><p>Toda a renda recebida forma a base do imposto mínimo. Ajustes ainda são possíveis até 31 de dezembro.</p><span class="datas__estado"><i class="ponto ponto--agora" aria-hidden="true"></i>Agora</span></li>
       <li data-revela style="--i:4"><b class="datas__quando">Abril e maio de 2027</b><p>Na declaração de ajuste, o imposto mínimo é apurado e o complemento é pago.</p><span class="datas__estado">A seguir</span></li>
       <li data-revela style="--i:5"><b class="datas__quando">Até 2028</b><p>Lucros até 2025 aprovados em 2025 podem ser pagos sem a nova tributação, nos prazos aprovados.</p><span class="datas__estado">A seguir</span></li>
@@ -392,7 +392,7 @@
   <div class="moldura grade contato__linha">
     <div class="contato__frase">
       <h2 id="t-sobre" class="titulo" data-linhas>Sobre este conteúdo</h2>
-      <p>Material preparado pela Santos Resende Advocacia para explicar o imposto de renda mínimo da Lei 15.270/2025. As informações e a calculadora são gerais e ilustrativas, e não substituem a leitura da lei nem a análise de cada caso.</p>
+      <p>Material preparado pela <span translate="no">Santos Resende Advocacia</span> para explicar o imposto de renda mínimo da Lei&nbsp;15.270/2025. As informações e a calculadora são gerais e ilustrativas, e não substituem a leitura da lei nem a análise de cada caso.</p>
     </div>
     <div class="contato__marca"><img src="img/logo-clara.png" width="640" height="183" alt="Santos Resende Advocacia" loading="lazy"></div>
     <dl class="contato__dados">
@@ -406,13 +406,13 @@
 
 <footer class="rodape">
   <div class="moldura rodape__linha">
-    <span>Santos Resende Advocacia</span>
+    <span translate="no">Santos Resende Advocacia</span>
     <nav class="rodape__nav" aria-label="Rodapé">
       <a class="elo" href="#como-funciona">Como funciona</a>
       <a class="elo" href="#calculadora">Calculadora</a>
       <a class="elo" href="#perguntas">Perguntas</a>
     </nav>
-    <span class="rodape__aviso">Conteúdo informativo, baseado na Lei 15.270/2025. Não constitui consultoria para casos específicos.</span>
+    <span class="rodape__aviso">Conteúdo informativo, baseado na Lei&nbsp;15.270/2025. Não constitui consultoria para casos específicos.</span>
   </div>
 </footer>
 

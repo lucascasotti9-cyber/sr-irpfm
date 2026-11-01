@@ -86,7 +86,7 @@
     var MAX = 1500000, X0 = 56, LARG = 480, Y0 = 250, ESC = 21;
     var S1 = 192, S2 = Math.hypot(192, 210), S3 = 96, L = S1 + S2 + S3;
     var fmt = function (n, d) { return n.toLocaleString('pt-BR', { maximumFractionDigits: d || 0 }); };
-    function renda(v) { return v === 0 ? 'R$ 0' : v < 1e6 ? 'R$ ' + fmt(v / 1000) + ' mil' : 'R$ ' + fmt(v / 1e6, 2) + ' mi'; }
+    function renda(v) { var R = 'R$\u00a0'; return v === 0 ? R + '0' : v < 1e6 ? R + fmt(v / 1000) + '\u00a0mil' : R + fmt(v / 1e6, 2) + '\u00a0mi'; }
     function conta(v, a) {
       if (v <= 600000) return 'Até R$ 600 mil, a alíquota mínima é zero.';
       if (v >= 1200000) return 'A partir de R$ 1,2 milhão, a alíquota fica em 10%.';
