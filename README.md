@@ -12,6 +12,7 @@ js/pagina.js          entradas das seções e os estados do demonstrativo em "Co
 js/inicio.js          marca que o JavaScript está ativo (sem ele, todo o conteúdo aparece direto)
 js/movimento.js       títulos por linha, frase com tinta e dígitos que rolam
 js/graficos.js        dica sobre os pontos dos gráficos (mouse, toque e teclado)
+js/perguntas.js       abas das perguntas frequentes (sem JavaScript, todas aparecem em sequência)
 img/                  logo (clara e escura), ícones e imagem de compartilhamento (Open Graph)
 favicon.ico, apple-touch-icon.png, site.webmanifest
 robots.txt, sitemap.xml

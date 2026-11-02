@@ -285,7 +285,7 @@
           <li data-revela style="--i:2"><b>LCI, LCA, CRI, CRA e poupança</b><span>Além de debêntures incentivadas e outros títulos do agro e imobiliários</span></li>
           <li data-revela style="--i:3"><b>FII e Fiagro com 100 cotistas ou mais</b><span>Negociados em bolsa ou balcão organizado</span></li>
           <li data-revela style="--i:4"><b>Herança, doações e indenizações</b><span>Inclusive adiantamento de legítima</span></li>
-          <li data-revela style="--i:5"><b>Lucros apurados até 2025</b><span>Aprovados até 31/12/2025 e pagos nos termos aprovados, até 2028</span></li>
+          <li data-revela style="--i:5"><b>Lucros apurados até 2025</b><span>Aprovados até 31/12/2025 (prazo estendido a 31/01/2026 por liminar do STF) e pagos nos termos aprovados, até 2028</span></li>
         </ul>
       </div>
     </div>
@@ -382,7 +382,7 @@
   <div class="moldura">
     <h2 id="t-datas" class="titulo" data-linhas>Datas que importam</h2>
     <ol class="datas">
-      <li data-revela style="--i:1"><b class="datas__quando">Dezembro de 2025</b><p>Prazo para aprovar a distribuição dos lucros apurados até 2025 sem a nova tributação.</p><span class="datas__estado">Encerrado</span></li>
+      <li data-revela style="--i:1"><b class="datas__quando">Dezembro de 2025</b><p>Prazo da lei para aprovar a distribuição dos lucros apurados até 2025 sem a nova tributação. Uma liminar do STF o estendeu até 31 de janeiro de 2026.</p><span class="datas__estado">Encerrado</span></li>
       <li data-revela style="--i:2"><b class="datas__quando">Janeiro de 2026</b><p>Começa a retenção de 10% sobre dividendos acima de R$&nbsp;50&nbsp;mil por mês.</p><span class="datas__estado">Em vigor</span></li>
       <li class="datas__agora" data-revela style="--i:3"><b class="datas__quando">Ano de 2026</b><p>Toda a renda recebida forma a base do imposto mínimo. Ajustes ainda são possíveis até 31 de dezembro.</p><span class="datas__estado"><i class="ponto ponto--agora" aria-hidden="true"></i>Agora</span></li>
       <li data-revela style="--i:4"><b class="datas__quando">Abril e maio de 2027</b><p>Na declaração de ajuste, o imposto mínimo é apurado e o complemento é pago.</p><span class="datas__estado">A seguir</span></li>
@@ -406,17 +406,110 @@
   </div>
 </section>
 
-<!-- Perguntas: respostas como texto corrido, em duas colunas -->
+<!-- Perguntas: abas por tema e perguntas que abrem e fecham. Sem JavaScript, todas as categorias aparecem em sequência. -->
 <section class="secao" id="perguntas" aria-labelledby="t-perguntas">
-  <div class="moldura grade perguntas">
-    <h2 id="t-perguntas" class="titulo perguntas__titulo" data-linhas>Dúvidas comuns</h2>
-    <div class="perguntas__texto">
-      <div class="pergunta" data-revela style="--i:1"><h3>Vou pagar 10% sobre tudo o que ganho?</h3><p>Não. O imposto mínimo é um piso. Todo o imposto que você já pagou no ano sobre os rendimentos da base é descontado, e só a diferença é cobrada.</p></div>
-      <div class="pergunta" data-revela style="--i:2"><h3>Quem vive de salário alto também é afetado?</h3><p>Em geral, não. A tabela progressiva já cobra cerca de 27% sobre salários altos, acima do piso de até 10%. O imposto mínimo pesa sobre quem tem renda alta e pouco imposto pago, como quem recebe principalmente dividendos.</p></div>
-      <div class="pergunta" data-revela style="--i:3"><h3>LCI, LCA e poupança entram na conta?</h3><p>Não. Esses rendimentos ficam fora da base, assim como CRI, CRA, debêntures incentivadas e FII e Fiagro com 100 cotistas ou mais.</p></div>
-      <div class="pergunta" data-revela style="--i:4"><h3>A retenção de 10% nos dividendos é definitiva?</h3><p>Não. Ela é uma antecipação. O valor retido é descontado do imposto mínimo na declaração anual.</p></div>
-      <div class="pergunta" data-revela style="--i:5"><h3>Lucros de 2025 distribuídos em 2026 entram na base?</h3><p>Não, desde que a distribuição tenha sido aprovada até 31 de dezembro de 2025 e o pagamento siga os termos aprovados, até 2028.</p></div>
-      <div class="pergunta" data-revela style="--i:6"><h3>Quando o complemento é pago?</h3><p>Na declaração de ajuste de 2027, referente ao ano de 2026. O valor entra no saldo do imposto a pagar.</p></div>
+  <div class="moldura faq">
+    <h2 id="t-perguntas" class="titulo" data-linhas>Perguntas frequentes</h2>
+    <p class="corrido" data-revela style="--i:1">As dúvidas mais comuns sobre a Lei&nbsp;15.270/2025, com base nas orientações da Receita Federal e nas ações em curso no STF. Atualizado em novembro de 2026.</p>
+    <div class="faq__abas" role="tablist" aria-label="Temas das perguntas" hidden>
+      <button class="faq__aba" role="tab" id="aba-quem" aria-controls="painel-quem" aria-selected="true" tabindex="0" type="button"><span>Quem paga</span></button>
+      <button class="faq__aba" role="tab" id="aba-calculo" aria-controls="painel-calculo" aria-selected="false" tabindex="-1" type="button"><span>Cálculo</span></button>
+      <button class="faq__aba" role="tab" id="aba-dividendos" aria-controls="painel-dividendos" aria-selected="false" tabindex="-1" type="button"><span>Dividendos</span></button>
+      <button class="faq__aba" role="tab" id="aba-empresas" aria-controls="painel-empresas" aria-selected="false" tabindex="-1" type="button"><span>Empresas</span></button>
+      <button class="faq__aba" role="tab" id="aba-prazos" aria-controls="painel-prazos" aria-selected="false" tabindex="-1" type="button"><span>Prazos e STF</span></button>
+    </div>
+    <div class="faq__paineis">
+      <div class="faq__painel" role="tabpanel" id="painel-quem" aria-labelledby="aba-quem">
+        <h3 class="faq__categoria">Quem paga</h3>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Vou pagar 10% sobre tudo o que ganho?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Não. O imposto mínimo é um piso, não um imposto a mais. Todo o imposto já pago no ano sobre os rendimentos da base é descontado, e só a diferença é cobrada. A alíquota de 10% só vale por inteiro a partir de R$&nbsp;1,2&nbsp;milhão de renda no ano.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Quem vive de salário alto também é afetado?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Em geral, não. A tabela progressiva já cobra cerca de 27% sobre salários altos, acima do piso de até 10%. O imposto mínimo pesa sobre quem tem renda alta e pouco imposto pago, como quem recebe principalmente dividendos.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Quem recebe menos de R$&nbsp;600&nbsp;mil por ano precisa se preocupar?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Com o imposto mínimo, não: até R$&nbsp;600&nbsp;mil de renda no ano, a alíquota mínima é zero. A retenção de 10% sobre dividendos acima de R$&nbsp;50&nbsp;mil por mês, porém, vale para qualquer renda; o valor retido é compensado na declaração de ajuste e pode ser restituído.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">A isenção do IR até R$&nbsp;5&nbsp;mil tem relação com o imposto mínimo?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>São duas mudanças da mesma lei. Desde janeiro de 2026, quem ganha até R$&nbsp;5&nbsp;mil por mês não paga IR, e há redução parcial até R$&nbsp;7.350. O imposto mínimo compensa parte dessa perda de arrecadação e só atinge quem recebe mais de R$&nbsp;600&nbsp;mil por ano.</p></div>
+        </details>
+      </div>
+      <div class="faq__painel" role="tabpanel" id="painel-calculo" aria-labelledby="aba-calculo">
+        <h3 class="faq__categoria">Cálculo</h3>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Como a alíquota mínima é calculada?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Divide-se a renda anual na base por 60.000 e subtrai-se 10. Com R$&nbsp;900&nbsp;mil, a alíquota é 5%. Ela sobe em linha reta entre R$&nbsp;600&nbsp;mil e R$&nbsp;1,2&nbsp;milhão, fica em 10% acima disso e incide sobre toda a base.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Rendimentos isentos entram na base?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Sim. A base soma quase toda a renda do ano, inclusive rendimentos isentos, com alíquota zero ou tributados exclusivamente na fonte, como dividendos e aplicações financeiras. Só ficam de fora as exceções previstas na lei.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">LCI, LCA e poupança entram na conta?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Não. Esses rendimentos ficam fora da base, assim como CRI, CRA, debêntures incentivadas, FII e Fiagro com 100 cotistas ou mais, ganhos de capital fora da bolsa, heranças e doações.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">O que é descontado do imposto mínimo?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>O IR devido na declaração pela tabela progressiva, o IR retido exclusivamente na fonte sobre rendimentos da base (como o das aplicações), a retenção de 10% sobre dividendos e o imposto pago sobre aplicações no exterior e fundos fechados. Só a diferença é cobrada.</p></div>
+        </details>
+      </div>
+      <div class="faq__painel" role="tabpanel" id="painel-dividendos" aria-labelledby="aba-dividendos">
+        <h3 class="faq__categoria">Dividendos</h3>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Como funciona a retenção de 10% nos dividendos?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Desde janeiro de 2026, quando uma mesma empresa paga mais de R$&nbsp;50&nbsp;mil em lucros e dividendos no mês à mesma pessoa física, ela retém 10% sobre o valor total pago no mês, e não só sobre o que passa de R$&nbsp;50&nbsp;mil. Até esse limite, não há retenção.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">A retenção de 10% é definitiva?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Não. Ela é uma antecipação: o valor retido é descontado do imposto mínimo na declaração anual. Se o retido superar o imposto devido, a diferença pode ser restituída.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Empresas do Simples Nacional também retêm?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Segundo a Receita Federal, sim: a retenção vale também para dividendos pagos por empresas do Simples. O ponto é contestado no STF (ADI&nbsp;7.917, da OAB), mas o pedido de liminar foi negado.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">E a capitalização de lucros?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Pela orientação da Receita, lucros apurados a partir de 2026 e incorporados ao capital social seguem a lógica dos dividendos: acima de R$&nbsp;50&nbsp;mil no mês, sujeitam-se à tributação. A devolução de capital formado com lucros isentos, em regra, não é tributada.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Dividendos enviados ao exterior também são tributados?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Sim. Lucros e dividendos pagos a quem mora fora do Brasil têm retenção de 10% na fonte, sem o limite de R$&nbsp;50&nbsp;mil por mês. Há discussão sobre a aplicação dos tratados para evitar a bitributação.</p></div>
+        </details>
+      </div>
+      <div class="faq__painel" role="tabpanel" id="painel-empresas" aria-labelledby="aba-empresas">
+        <h3 class="faq__categoria">Empresas</h3>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">O que é o redutor?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Se a carga efetiva da empresa (IRPJ e CSLL sobre o lucro), somada ao imposto mínimo do sócio sobre os dividendos, passar do teto nominal, o excesso é abatido do imposto mínimo. O teto é de 34% na regra geral, 40% para seguradoras e algumas financeiras e 45% para bancos.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">O que a empresa precisa ter para o sócio usar o redutor?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Demonstrações financeiras que comprovem o lucro e a carga efetiva de IRPJ e CSLL. Sem elas, a empresa não comprova a carga e o sócio perde o redutor.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Lucros de 2025 distribuídos em 2026 entram na base?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Não, se a distribuição tiver sido aprovada até 31 de dezembro de 2025 e o pagamento seguir os termos aprovados, até 2028. Uma liminar do STF, de dezembro de 2025, estendeu esse prazo de aprovação para 31 de janeiro de 2026; ela ainda aguarda confirmação do Plenário.</p></div>
+        </details>
+      </div>
+      <div class="faq__painel" role="tabpanel" id="painel-prazos" aria-labelledby="aba-prazos">
+        <h3 class="faq__categoria">Prazos e STF</h3>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">Quando o complemento é pago?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Na declaração de ajuste de 2027, referente ao ano de 2026. O valor entra no saldo do imposto a pagar.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">A lei está sendo questionada na Justiça?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Sim. Há ações no STF, como as ADIs 7.912 (CNC), 7.914 (CNI) e 7.917 (OAB). Até agora, a única medida concedida foi a liminar que prorrogou o prazo de aprovação dos lucros de 2025. A tributação continua em vigor enquanto não há julgamento de mérito.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__pergunta">O que ainda dá para fazer em 2026?</span><i class="faq__mais" aria-hidden="true"></i></summary>
+          <div class="faq__resposta"><p>Os rendimentos de 2026 formam a base da primeira apuração, na declaração de 2027. A seção “O que revisar até 31 de dezembro” reúne os pontos de atenção.</p></div>
+        </details>
+      </div>
     </div>
   </div>
 </section>
@@ -458,5 +551,6 @@
 <script src="js/pagina.js"></script>
 <script src="js/movimento.js"></script>
 <script src="js/graficos.js"></script>
+<script src="js/perguntas.js"></script>
 </body>
 </html>
