@@ -17,7 +17,9 @@
   /* posição na reta da lei: x de R$ 0 a R$ 1,5 mi, y de 0% a 10% (mesmas coordenadas do SVG) */
   function posiciona(base,aliq){if(!ponto)return;
     var x=48+Math.min(base,1500000)/1500000*488,y=190-aliq*16;
-    ponto.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px)';}
+    ponto.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px)';
+    var t=ponto.querySelector('.voce__txt');if(t){t.textContent='você · '+aliq.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
+      t.setAttribute('text-anchor',x>470?'end':x<110?'start':'middle');}}
   function atualiza(){var v={};f.querySelectorAll('input').forEach(function(i){v[i.name]=ler(i);});
     var r=IRM.calcular(v);
     out('base',IRM.reaisCurto(r.base).replace(/ /g,'\u00a0'));out('aliq',r.aliquota.toLocaleString('pt-BR',{maximumFractionDigits:2})+'%');

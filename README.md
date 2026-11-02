@@ -10,7 +10,8 @@ js/irm.js             núcleo do cálculo (funções puras, sem DOM)
 js/calculadora.js     liga o formulário ao núcleo e move o ponto "você" na reta da lei
 js/pagina.js          entradas das seções e os estados do demonstrativo em "Como funciona"
 js/inicio.js          marca que o JavaScript está ativo (sem ele, todo o conteúdo aparece direto)
-js/movimento.js       títulos por linha, frase com tinta, dígitos que rolam e a cena "A reta da lei"
+js/movimento.js       títulos por linha, frase com tinta e dígitos que rolam
+js/graficos.js        dica sobre os pontos dos gráficos (mouse, toque e teclado)
 img/                  logo (clara e escura), ícones e imagem de compartilhamento (Open Graph)
 favicon.ico, apple-touch-icon.png, site.webmanifest
 robots.txt, sitemap.xml
